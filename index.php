@@ -6,6 +6,7 @@
     <title>Super Reminder</title>
 </head>
 <body>
+    <div>this is the index</div>
     
 </body>
 </html>
