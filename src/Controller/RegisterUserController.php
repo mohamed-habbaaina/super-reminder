@@ -5,16 +5,17 @@ require_once('./../Model/ModelUser.php');
 
 $respons = [];
 
-if(isset($_POST['login'])){
+if(isset($_POST['email'])){
     
+    // var_dump($_POST);
     
     if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['password']) && isset($_POST['rePass'])){
         
         $modelUser = new \Model\ModelUser\ModelUser();
         
-        $login = $modelUser->isValid($_POST['login']);
         $firstName = $modelUser->isValid($_POST['firstName']);
         $lastName = $modelUser->isValid($_POST['lastName']);
+        $email = $modelUser->isValid($_POST['email']);
         $password = $modelUser->isValid($_POST['password']);
         $rePass = $modelUser->isValid($_POST['rePass']);
         
@@ -25,9 +26,20 @@ if(isset($_POST['login'])){
         
         $regExpName = '/^[A-Za-z][A-Za-z0-9]{1,15}$/';
         
-        if(!preg_match($regExpName,$firstName) || !preg_match($regExpName,$lastName)){
+        if(!preg_match($regExpName,$firstName) || !preg_match($regExpName,$lastName))
+        {
             $respons['Name'] = 'Note valide, minimum 2 character !';
         }
+
+        // regExp valid Email.
+
+        $regExpEmail = '/^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-z]{2,5})$/'; 
+
+        if(!preg_match($regExpEmail, $email))
+        {
+            $respons['Email'] = 'Note valide !';
+        }
+
         
         // regExp valid Password: strlen >7, accept only [A-Za-z0-9] && minimum 1 lower case 1 upper case 1 number.
         
@@ -39,21 +51,21 @@ if(isset($_POST['login'])){
         
         if($password !== $rePass){
             
-            $respons['RePassword'] = 'Password not match !';
+            $respons['Repeat password'] = 'Password not match !';
         }
         
         if(empty($respons)){
             
-            if(!$modelUser->check_DB($login)){
-                
+            if(!$modelUser->check_DB($email))
+            {
                 $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
-                $modelUser->register($login, $firstName, $lastName, $password);
+                $modelUser->register($firstName, $lastName, $email, $password);
                 $respons['ok'] = 'Register succes !';
                 
-                $_SESSION['login'] = $login;
+                $_SESSION['email'] = $email;
                 
             } else {
-                $respons['login'] = 'Login exist in database !';
+                $respons['email'] = 'email exist in database !';
             }
         }
     } else {

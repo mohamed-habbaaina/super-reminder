@@ -5,7 +5,7 @@ namespace Model\DbConnection;
 private static $servername = 'localhost';
 private static $username_b = 'root';
 private static $password_b = '';
-private static $database = 'moduleconnexionb2'; //todo changement de la base de données
+private static $database = 'superReminder';
 private static ?\PDO $_db = null;
 
 public static function getDb()

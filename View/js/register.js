@@ -7,7 +7,7 @@ const alert = document.querySelector('.alert');
             
     let formData = new FormData(formRegister);
         
-    let response = await fetch('../Controller/ControllerRegisterUser.php',
+    let response = await fetch('../src/Controller/RegisterUserController.php',
     {
         method: 'post',
         headers:{
@@ -18,7 +18,7 @@ const alert = document.querySelector('.alert');
             
     let data = await  response.json();
             
-    console.log(data);
+    // console.log(data);
 
     alert.innerHTML = '';
 
@@ -30,7 +30,7 @@ const alert = document.querySelector('.alert');
     alert.style.color = 'green';
 
     setTimeout(function() {
-        window.location = "./connexion.php";
+        window.location = "./connection.html";
     }, 2000)
 
     } else {

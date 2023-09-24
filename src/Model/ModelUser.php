@@ -19,11 +19,11 @@ class ModelUser {
     }
 
     // Check if login exists in the database
-    public function check_DB(string $login): array|bool
+    public function check_DB(string $email): array|bool
     {
-        $requestCheck = "SELECT * FROM `user` WHERE `login`=:login";
+        $requestCheck = "SELECT * FROM `user` WHERE `email`=:email";
         $data = DbConnection::getDb()->prepare($requestCheck);
-        $data->bindParam(':login', $login);
+        $data->bindParam(':email', $email);
         $data->execute();
         return $data->fetch(\PDO::FETCH_ASSOC) ?? false;
     }
@@ -31,14 +31,14 @@ class ModelUser {
     /**
      * Register the user in the database.
      */
-    public function register(string $login, string $firstname, string $lastname, string $password): void
+    public function register(string $firstname, string $lastname, string $email,  string $password): void
     {
-            $requestInsert = "INSERT INTO `user` (`login`, `firstname`, `lastname`, `password`) 
-                                VALUE (:login, :firstname, :lastname, :password)";
+            $requestInsert = "INSERT INTO `user` (`firstname`, `lastname`, `email`, `password`) 
+                                VALUE (:firstname, :lastname, :email, :password)";
             $request = DbConnection::getDb()->prepare($requestInsert);
-            $request->bindParam(':login', $login);
             $request->bindParam(':firstname', $firstname);
             $request->bindParam(':lastname', $lastname);
+            $request->bindParam(':email', $email);
             $request->bindParam(':password', $password);
             $request->execute();
     }
