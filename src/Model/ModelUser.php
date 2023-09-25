@@ -18,7 +18,7 @@ class ModelUser {
         return $input;
     }
 
-    // Check if login exists in the database
+    // Check if email exists in the database
     public function check_DB(string $email): array|bool
     {
         $requestCheck = "SELECT * FROM `user` WHERE `email`=:email";
@@ -41,5 +41,29 @@ class ModelUser {
             $request->bindParam(':email', $email);
             $request->bindParam(':password', $password);
             $request->execute();
+    }
+
+    public function connection(string $email, string $password): bool
+    {
+
+        $data = $this->check_DB($email);
+
+        if(!empty($data)){
+
+            $password_db = $data['password'];
+            
+
+                // check password Haché.
+                if (password_verify($password, $password_db)){
+                  
+                    return true;
+
+                }else{
+
+                    return false;
+                }
+        }else{
+            return false;
+        }
     }
 }
