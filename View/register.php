@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +23,7 @@
         <input type="text" name="firstName" placeholder="Your FirstName ...">
         
         <label for="lastName">LastName</label>
-        <input type="text" name="lastName" placeholder="Your lastName ...">
+        <input type="text" name="lastfont-style: ;Name" placeholder="Your lastName ...">
         
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="Your Email ...">
