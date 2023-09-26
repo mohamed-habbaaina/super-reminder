@@ -30,7 +30,7 @@ const alert = document.querySelector('.alert');
     alert.style.color = 'green';
 
     setTimeout(function() {
-        window.location = "./connection.html";
+        window.location = "./connection.php";
     }, 2000)
 
     } else {
