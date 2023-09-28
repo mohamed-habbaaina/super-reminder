@@ -10,7 +10,7 @@
 </head>
 <body>
      <section class="section">
-                <article class="left-aside">
+                <aside class="left-aside">
                         <div class="paraf-4">
                                <div class="word-4">whath</div>
                                <div>to</div>
@@ -27,8 +27,8 @@
                                <input type="submit" name="list" value="add list" class="adding">
                            </div>
                        </form>
-                </article>
-                <article class="right-aside">
+                </aside>
+                <aside class="right-aside">
                             <div class="paraf-8">
                                 <p class="word-2">to </p>
                                 <p class="word-3">do </p>
@@ -38,7 +38,7 @@
                                <ul>
                                     <li>
                                         <form action="">
-                                            <h1>title list 1</h1>
+                                            <h2>title list 1</h2>
                                             <p>date</p>
                                             <div>task1</div>
                                             <div>task2</div>
@@ -48,7 +48,7 @@
                                     </li>
                                     <li>
                                         <form action="">
-                                            <h1>title list 2</h1>
+                                            <h2>title list 2</h2>
                                             <p>date</p>
                                             <div>task1</div>
                                             <div>task2</div>
@@ -56,14 +56,23 @@
                                             <input type="submit" value="add task">
                                         </form>
                                     </li>
-
+                                    <li>
+                                        <form action="">
+                                            <h2>title list 3</h2>
+                                            <p>date</p>
+                                            <div>task1</div>
+                                            <div>task2</div>
+                                            <input type="text">
+                                            <input type="submit" value="add task">
+                                        </form>
+                                    </li>
                                </ul>
 
 
                                 
                                    
                              </div>
-                </article>
+                </aside>
      </section>
 </body>
 </html>
