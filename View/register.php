@@ -3,6 +3,7 @@
 
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,7 +45,7 @@
 
 
                 </article>
-                <article class="right-aside">
+                <article class="right-aside-register">
                             <div class="paraf-1">create tasks</div>
                             <div class="paraf-2">
                                 <p class="word-1">withe</p>
@@ -52,11 +53,11 @@
                                 <p class="word-3">do </p>
                                 <p class="word-4">list</p>
                             </div>
-                                <div class="paraf-3">
+                            <div class="paraf-3">
                                 the new app creator of <br>
                                 sheet  task to remind at <br>
                                 time to do all your works <br>
-                                </div>
+                            </div>
                 </article>
      </section>
 
