@@ -1,24 +1,37 @@
 <?php
 
-use App\Controllers\HomeController;
 
 require 'vendor/autoload.php';
 
-require 'AltoRouter.php';
 
 $router = new AltoRouter();
 
 
 $router->setBasePath('/B2/super-reminder');
 
+use App\Controllers\HomeController;
+use App\Controllers\LoginController;
+use App\Controllers\RegisterController;
+
+//homepage route
 $router->map( 'GET', '/', function() { 
        $homeController =  new HomeController();
        $homeController->showHome();
 }, 'home' );
 
+//registerPage route
 
+$router->map( 'GET', '/register', function() { 
+    $registerController = new RegisterController;
+    $registerController->showRegister();
+}, 'register' );
 
+//loginPage route
 
+$router->map( 'GET' , '/login' , function() {
+    $loginController = new LoginController();
+    $loginController->showLogin();
+},'login');
 
 
 

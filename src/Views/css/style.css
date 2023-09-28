@@ -115,7 +115,9 @@ body {
 
 }
 .paraf-7 a{
-    width: 7rem;
+    width: 7rem;width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
     height: 2rem;
     margin:20px 10px;
     border-radius: 10px;
@@ -223,13 +225,21 @@ body {
 }
 
 .right-aside-register{
+    width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
     background-image: url(../images/registerpage.jpg);
     background-size: cover;
+    border-radius: 10px;
 }
 
 .right-aside-login{
+    width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
     background-image: url(../images/loginpage.jpg);
     background-size: cover;
+    border-radius: 10px;
 }
 .list-container{
     display: grid;
