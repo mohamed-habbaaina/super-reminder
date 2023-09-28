@@ -38,7 +38,7 @@
 
 
                 </article>
-                <article class="right-aside">
+                <article class="right-aside-login">
                             <div class="paraf-1">create tasks</div>
                             <div class="paraf-2">
                                 <p class="word-1">withe</p>
