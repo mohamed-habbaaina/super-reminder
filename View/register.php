@@ -16,7 +16,7 @@
 <body>
 
 <section class="section">
-                <article class="left-aside">
+                <aside class="left-aside">
                         <div class="paraf-4">
                                <div class="word-4">whath</div>
                                <div>to</div>
@@ -44,8 +44,8 @@
                         </form>
 
 
-                </article>
-                <article class="right-aside-register">
+                </aside>
+                <aside class="right-aside-register">
                             <div class="paraf-1">create tasks</div>
                             <div class="paraf-2">
                                 <p class="word-1">withe</p>
@@ -58,7 +58,7 @@
                                 sheet  task to remind at <br>
                                 time to do all your works <br>
                             </div>
-                </article>
+                </aside>
      </section>
 
 </body>
