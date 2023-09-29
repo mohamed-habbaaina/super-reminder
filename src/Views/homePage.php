@@ -30,9 +30,9 @@
                         </div>
 
                         <div class="paraf-7">
-                            <a class="signup" href="">sign up</a>
+                            <a class="signup" href="/B2/super-reminder/register">sign up</a>
                             <i class="fa-regular fa-heart"></i>
-                            <a class="addtasks" href="">add tasks</a>
+                            <a class="addtasks" href="/B2/super-reminder/login">add tasks</a>
                            
                         </div>
                 </aside>

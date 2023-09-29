@@ -1,8 +1,8 @@
 <?php
 namespace App\Controllers;
-namespace App\Models;
 session_start();
 use App\Models\UserModel;
+
 class RegisterUserController{
 
     private UserModel $userModel ;
@@ -16,21 +16,21 @@ class RegisterUserController{
     }
     
     
-    public function RegisterUser(){
+    public function registerUser($firstname,$lastname,$email,$password,$rePass){
         
-        if(isset($_POST['email'])){
+        if(isset($email)){
             
             // var_dump($_POST);
             
-            if(isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['password']) && isset($_POST['rePass'])){
+            if(isset($firstname) && isset($lastname) && isset($password) && isset($rePass)){
                 
-                $modelUser = new \Model\ModelUser\ModelUser();
+                $this->userModel = new UserModel();
                 
-                $firstName = $modelUser->isValid($_POST['firstName']);
-                $lastName = $modelUser->isValid($_POST['lastName']);
-                $email = $modelUser->isValid($_POST['email']);
-                $password = $modelUser->isValid($_POST['password']);
-                $rePass = $modelUser->isValid($_POST['rePass']);
+                $firstname = $this->userModel->isValid($firstname);
+                $lastname = $this->userModel->isValid($lastname);
+                $email = $this->userModel->isValid($email);
+                $password = $this->userModel->isValid($password);
+                $rePass = $this->userModel->isValid($rePass);
                 
                 //****** */ validation inputs regExp.
                 // **********************************
@@ -39,7 +39,7 @@ class RegisterUserController{
                 
                 $regExpName = '/^[A-Za-z][A-Za-z0-9]{1,15}$/';
                 
-                if(!preg_match($regExpName,$firstName) || !preg_match($regExpName,$lastName))
+                if(!preg_match($regExpName,$firstname) || !preg_match($regExpName,$lastname))
                 {
                     $respons['Name'] = 'Note valide, minimum 2 character !';
                 }
@@ -69,10 +69,10 @@ class RegisterUserController{
                 
                 if(empty($respons)){
                     
-                    if(!$modelUser->check_DB($email))
+                    if(!$this->userModel->check_Bd($email))
                     {
                         $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
-                        $modelUser->register($firstName, $lastName, $email, $password);
+                        $this->userModel->register($firstname, $lastname, $email, $password);
                         $respons['ok'] = 'Register succes !';
                         
                         $_SESSION['email'] = $email;

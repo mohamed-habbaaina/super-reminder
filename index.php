@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 require 'vendor/autoload.php';
 
@@ -12,6 +13,7 @@ $router->setBasePath('/B2/super-reminder');
 use App\Controllers\HomeController;
 use App\Controllers\LoginController;
 use App\Controllers\RegisterController;
+use App\Controllers\RegisterUserController;
 
 //homepage route
 $router->map( 'GET', '/', function() { 
@@ -25,6 +27,20 @@ $router->map( 'GET', '/register', function() {
     $registerController = new RegisterController;
     $registerController->showRegister();
 }, 'register' );
+
+$router->map( 'POST', '/register', function() {
+
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $login = $_POST['email'];
+    $password = $_POST['password'];
+    $rePass = $_POST['rePass'];
+
+    $registerUserController = new RegisterUserController();
+    $registerUserController->registerUser($firstname, $lastname, $login, $password, $rePass);
+}, 'register-user' );
+
+
 
 //loginPage route
 
