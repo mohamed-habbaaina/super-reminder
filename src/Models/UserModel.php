@@ -27,22 +27,23 @@ public function isValid(string  $input) : string {
 public function check_Bd(string $email): array|bool{
         $requestCheck = "SELECT* FROM `user` WHERE `email` = :email";
         $data = $this->getDb()->prepare($requestCheck);
-        $data->bindParam($email, ':email');
-        $data->execute();
+        $data->execute([
+            ':email' => $email,
+        ]);
         return $data->fetch(\PDO::FETCH_ASSOC) ?? false;
 }
 
 
 public function register(string $firstname, string $lastname, string $email, string $password):void {
 
-        $requestInsert = "INSERT INTO `user`('firstname', 'lastname', 'email', 'password')
-                                     values(:firstname, :lastname, :email, :password)";
+        $requestInsert = "INSERT INTO `user`(firstname, lastname, email, password) values(:firstname, :lastname, :email, :password)";
         $request = $this->getDb()->prepare($requestInsert);
-        $request->bindParam($firstname, ':firstname');
-        $request->bindParam($lastname, ':lastname');
-        $request->bindParam($email, ':email');
-        $request->bindParam($password, ':password');
-        $request->execute();
+        $request->execute([
+            ':firstname' => $firstname,
+            ':lastname' => $lastname,
+            ':email' => $email,
+            ':password' => $password,
+        ]);
 
 }
 

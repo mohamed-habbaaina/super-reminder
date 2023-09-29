@@ -7,7 +7,7 @@ const alert = document.querySelector('.alert');
             
     let formData = new FormData(formRegister);
         
-    let response = await fetch('../src/Controller/RegisterUserController.php',
+    let response = await fetch('../src/Controllers/RegisterUserController.php',
     {
         method: 'post',
         headers:{
