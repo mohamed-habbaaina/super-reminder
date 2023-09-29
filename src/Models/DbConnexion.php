@@ -1,7 +1,6 @@
 <?php
-namespace Model\DbConnection;
- class DbConnection 
-{
+namespace App\Models;
+ class DbConnexion {
 private static $servername = 'localhost';
 private static $username_b = 'root';
 private static $password_b = '';
