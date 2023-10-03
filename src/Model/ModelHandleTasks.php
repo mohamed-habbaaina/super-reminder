@@ -1,5 +1,5 @@
 <?php
-namespace ModelHandleTasks;
+namespace Model\ModelHandleTasks;
 use Model\DbConnection\DbConnection;
 require_once ('DbConnection.php');
 
@@ -19,14 +19,23 @@ class ModelHandleTasks{
         return $dataUser['id_user'] ?? false;
     }
 
-    public function getTitlesUser(string $idUser) : array | bool
+    public function getListes(string $idUser) : array | bool
     {
-        $reqTitles = 'SELECT * FROM `list` WHERE id_user=:idUser';
+        $reqTitles = "SELECT * FROM `list` WHERE id_user=:idUser";
         $data = DbConnection::getDb()->prepare($reqTitles);
         $data->bindParam(':idUser', $idUser);
         $data->execute();
-        return $data->fetch(\PDO::FETCH_ASSOC) ?? false;
+        return $data->fetchAll(\PDO::FETCH_ASSOC) ?? false;
     }
+
+    // public function getTitlesDone(string $idUser) : array | bool
+    // {
+    //     $reqTitles = "SELECT * FROM `list` WHERE id_user=:idUser AND status='fait'";
+    //     $data = DbConnection::getDb()->prepare($reqTitles);
+    //     $data->bindParam(':idUser', $idUser);
+    //     $data->execute();
+    //     return $data->fetchAll(\PDO::FETCH_ASSOC) ?? false;
+    // }
 
     public function getAllTasks(int $idTitle) : array | bool
     {
@@ -34,7 +43,7 @@ class ModelHandleTasks{
         $data = DbConnection::getDb()->prepare($reqTasks);
         $data->bindParam(':idTitle', $idTitle);
         $data->execute();
-        return $data->fetch(\PDO::FETCH_ASSOC) ?? false;
+        return $data->fetchAll(\PDO::FETCH_ASSOC) ?? false;
     }
 
     public function insertTitle(int $idUser, string $title) : void
@@ -66,9 +75,13 @@ class ModelHandleTasks{
 
     }
 
-    public function doneTitle() : void
+    // changer le status en cours => done
+    public function doneList($id_list) : void
     {
-
+        $updatStatus = "UPDATE `list` SET `status`='fait' WHERE id_list=:id_list";
+        $data = DbConnection::getDb()->prepare($updatStatus);
+        $data->bindParam(':id_list', $id_list);
+        $data->execute();
     }
 
     public function doneTask() : void
@@ -76,4 +89,12 @@ class ModelHandleTasks{
         
     }
 
+    // delete list
+    public function deleteList($id_list) : void
+    {
+        $delete = "DELETE FROM `list` WHERE id_list=:id_list";
+        $data = DbConnection::getDb()->prepare($delete);
+        $data->bindParam(':id_list', $id_list);
+        $data->execute();
+    }
 }
