@@ -30,8 +30,8 @@ formConnect.addEventListener('submit', async (e) => {
         alert.style.color = 'green';
     
         setTimeout(function() {
-            window.location = "../";
-        }, 2000)
+            window.location = "../View/todoList.php";
+        }, 1500)
     
     } else {
         alert.innerHTML = data;
