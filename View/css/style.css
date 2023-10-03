@@ -1,11 +1,3 @@
 .done{
     text-decoration: line-through;
 }
-
-checkbox.addEventListener('click', async (e)=>{
-                
-    e.preventDefault();
-    
-    let updatStatus = await fetch('./../src/Controller/ControllerHandleTasks.php?status=' + item.id)
-    window.location.reload();
-});
