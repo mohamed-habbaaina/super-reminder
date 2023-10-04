@@ -66,4 +66,11 @@ class ModelUser {
             return false;
         }
     }
+
+    public function deconnect(): void
+    {
+        $_SESSION = []; 
+        session_unset();
+        session_destroy();
+    }
 }
