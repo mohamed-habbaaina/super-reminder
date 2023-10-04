@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 <main>
-
+<?php require_once('./include/header.php'); ?>
     <div class="alert"></div>
 
     <form action="" method="post" id="formConnect">
@@ -34,7 +34,8 @@ session_start();
                     <button class="btn">Connection</button>
     </form>
                 
-                
+    <?php require_once('./include/footer.php'); ?>
+       
 </main>
 
 </body>
