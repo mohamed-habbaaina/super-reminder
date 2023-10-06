@@ -1,7 +1,9 @@
 <?php
-session_start();
+
+
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +11,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="./js/connect.js"></script>
-
-    <title>Login</title>
+    <script defer src="./js/register.js"></script>
+    <title>Super Reminder | Register</title>
+     
 </head>
 <body>
 
@@ -23,30 +25,31 @@ session_start();
                                <div>do ?</div>
                         </div>
                         <div class="paraf-5">
-                                <div>sign in</div>
+                                <div>sign up</div>
                         </div>
-                        <form action="" method="post" id="formlConnect" class="form">
-                            
-                            <div class="form-container-login">
-                                    <input type="email" name="email"  class="form-box-login"
+                        <div class="alert"></div>
 
-                                    <?php
-                                        if(isset($_SESSION['email'])){ ?>
-                                        value=" <?= $_SESSION['email'];?>"
-                                        <?php } else { ?>
-                                            placeholder = "Enter your Email ...">
-                                        <?php }; ?>
+                        <form action="" method="post" id="formRegister" class="form">
+                            <div class="form-container">
+                                    <input type="text" name="firstname" placeholder="Enter your FirstName ..." class="form-box">
+                                    
+                                    <input type="text" name="lastname" placeholder="Enter your lastName ..." class="form-box">
+                                    
+                                    <input type="email" name="email" placeholder="Enter your Email ..." class="form-box">
                                         
-                                    <input type="password" name="password" placeholder="Enter your  Password ..." class="form-box-login">
+                                    <input type="password" name="password" placeholder="Enter your  Password ..." class="form-box">
+                                    
+                                    <input type="password" name="rePass" placeholder="Confirm the Password ..." class="form-box">
                             </div>
                             <div class="paraf-7">
-                                    <button class="btn">Connection</button>
+                                            <button class="btn">Register</button>
+
                             </div>
                         </form>
 
 
                 </aside>
-                <aside class="right-aside-login">
+                <aside class="right-aside-register">
                             <div class="paraf-1">create tasks</div>
                             <div class="paraf-2">
                                 <p class="word-1">withe</p>
@@ -54,18 +57,13 @@ session_start();
                                 <p class="word-3">do </p>
                                 <p class="word-4">list</p>
                             </div>
-                                <div class="paraf-3">
+                             <div class="paraf-3">
                                 the new app creator of <br>
                                 sheet  task to remind at <br>
                                 time to do all your works <br>
-                                </div>
+                            </div>
                 </aside>
      </section>
 
 </body>
 </html>
-
-
-
-
-

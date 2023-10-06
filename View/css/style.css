@@ -1,3 +1,358 @@
-.done{
-    text-decoration: line-through;
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body {
+    font-family: 'Koulen', cursive;
+   
 }
+
+.section{
+    margin: auto;
+    background-color: #725c5c81;
+    width: 90%;
+    height: 630px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.left-aside{
+    width: 50%;
+    margin: 30px 30px;
+    margin-right: 0px;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+.right-aside{
+    width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
+    background-image: url(../images/todolist.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.right-aside h1{
+    font-size: 80px;
+}
+.paraf-1{
+    font-size: 96px;
+}
+.paraf-2{
+    display: flex;
+    padding: 10px 30px;
+   
+}
+.paraf-2 p{
+    font-size: 64px;
+}
+
+.word-1{
+    color: #ffff;
+}
+
+.word-4{
+    color: #E23434;
+}
+
+.paraf-2{
+    margin:auto;
+    font-size: 32px;
+}
+.paraf-3{
+    margin-left: 60px;
+    font-size: 24px;
+}
+.paraf-4{
+    width: 100%;
+    height: 5rem;
+    border-radius: 10px;
+    display: flex;
+    font-size: 48px;
+
+}
+.paraf-4 div{
+    margin-left: 20px;
+    font-family: 'Koulen', cursive;
+
+    
+
+}
+.paraf-5 {
+    width: 100%;
+    height: 7rem;
+    border-radius: 10px;
+
+}
+.paraf-5 div{
+    font-size: 60px;
+    margin-left: 10rem;
+}
+
+.paraf-6 {
+    display: flex;
+    width: 100%;
+    height: 17rem;
+    border-radius: 10px;
+
+}
+.paraf-6 div{
+    width: 50%;
+    height: 100%;
+    
+}
+.roller{
+    background-image: url(../images/home-roller-aside-left.png);
+    background-size: cover;
+}
+.sum-task p{
+    margin: 3rem 5rem;
+}
+.paraf-7 {
+    width: 100%;
+    height: 6rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+.paraf-7 a{
+    width: 7rem;width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
+    height: 2rem;
+    margin:20px 10px;
+    border-radius: 10px;
+    color: #ffff;
+}
+.signup{
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin: 4px 15px;
+    border: none;
+    background-color: #725C5C;
+    color: #ffff;
+    font-family: 'Koulen', cursive;
+    text-align: center;
+    text-decoration: none;
+}
+.signin{
+    background-color: green;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin: 4px 15px;
+    border: none;
+    color: #ffff;
+    font-family: 'Koulen', cursive;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form-container{
+    margin: auto;
+    width: 90%;
+    height: 20rem;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container-login{
+    margin: auto;
+    width: 90%;
+    height: 15rem;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form{
+    font-family: 'Koulen', cursive;
+
+}
+
+.form-box{
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 10px;
+    margin: 4px 10px;
+    border: none;
+
+    
+}
+
+.form-box-login{
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 10px;
+    margin: 30px 10px;
+    border: none;
+}
+.btn{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin: 4px 15px;
+    border: none;
+    background-color: #725C5C;
+    color: #ffff;
+    font-family: 'Koulen', cursive;
+
+}
+.arrea{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 20rem;
+    
+}
+
+.startline{
+
+    font-size: 32px;
+    margin-left:4em
+}
+.adding{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 10px;
+    color: black;
+    background-color: #D9D9D9;
+    align-items: center;
+    margin: auto;
+    font-family: 'Koulen', cursive;
+
+    
+}
+
+.paraf-8{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+.paraf-8 p{
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.right-aside-register{
+    width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
+    background-image: url(../images/registerpage.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.right-aside-login{
+    width: 50%;
+    margin: 30px 30px;
+    margin-left: 0px;
+    background-image: url(../images/loginpage.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.list-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    margin: auto;
+    width: 95%;
+    overflow-y: scroll;
+    
+}
+.list-container ul{
+    list-style-type: none;
+}
+.list-box{
+    margin: auto;
+    width: 15rem;
+    height: 15rem;
+    border: dotted;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+/* .check-box[data-done="true"] > *:nth-child(1){
+    display: none;
+}
+.check-box[data-done="true"] > *:nth-child(2){
+    display: block;
+}
+
+.check-box[data-done="false"] > *:nth-child(1){
+    display: block;
+}
+.check-box[data-done="false"] > *:nth-child(2){
+    display: none;
+} */
+
+
+@media (max-width: 1344px) {
+    .section {
+      background-color: yellow;
+    }
+    .sum-task p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        width: 100%;
+    }
+    .roller{
+        display: none;
+    }
+    .paraf-5 div{
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 0;
+    }
+    .paraf-7 {
+        width: 90%;
+        height: 3rem;
+        align-items: center;
+    }
+    a.signin , a.signup{
+            text-align: center;
+    }
+
+    .paraf-1 {
+        font-size: 3.5rem;
+        margin-left: 1.5rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Media query pour les tablettes */
+  @media (max-width: 900px) {
+    .section{
+      background-color: red;
+    }
+  }
+  
+  /* Media query pour les smartphones */
+  @media (max-width: 480px) {
+    .section{
+      background-color: green;
+    }
+  }
+    
