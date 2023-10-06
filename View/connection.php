@@ -34,8 +34,8 @@ session_start();
                                         if(isset($_SESSION['email'])){ ?>
                                         value=" <?= $_SESSION['email'];?>"
                                         <?php } else { ?>
-                                            placeholder = "Enter your Email ...">
-                                        <?php }; ?>
+                                            placeholder = "Enter your Email ..."
+                                        <?php }; ?>>
                                         
                                     <input type="password" name="password" placeholder="Enter your  Password ..." class="form-box-login">
                             </div>
