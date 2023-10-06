@@ -31,9 +31,9 @@
 
                         <form action="" method="post" id="formRegister" class="form">
                             <div class="form-container">
-                                    <input type="text" name="firstname" placeholder="Enter your FirstName ..." class="form-box">
+                                    <input type="text" name="firstName" placeholder="Enter your FirstName ..." class="form-box">
                                     
-                                    <input type="text" name="lastname" placeholder="Enter your lastName ..." class="form-box">
+                                    <input type="text" name="lastName" placeholder="Enter your lastName ..." class="form-box">
                                     
                                     <input type="email" name="email" placeholder="Enter your Email ..." class="form-box">
                                         
