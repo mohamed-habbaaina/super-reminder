@@ -14,6 +14,7 @@ session_start();
     <title>Login</title>
 </head>
 <body>
+<?php require_once('./include/header.php'); ?>
 
 <section class="section">
                 <aside class="left-aside">
@@ -61,6 +62,8 @@ session_start();
                                 </div>
                 </aside>
      </section>
+
+     <?php require_once('./include/footer.php'); ?>
 
 </body>
 </html>
