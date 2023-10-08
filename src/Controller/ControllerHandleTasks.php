@@ -13,7 +13,8 @@ if(isset($_SESSION['email']))
 
 if(isset($_GET['listText']))
 {
-    $modelHandleTask->insertTitle($id_user, $_GET['listText']);
+    $listText = $modelHandleTask->isValid($_GET['listText']);
+    $modelHandleTask->insertTitle($id_user, $listText);
     // $titles = $modelHandleTask->getTitlesUser($id_user);
     echo json_encode($titles);
 }

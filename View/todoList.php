@@ -13,6 +13,16 @@ session_start();
     <title>Super Reminder | Tasks</title>
 </head>
 <body>
+<header>
+        <?php
+            if(isset($_SESSION['autoris']) && $_SESSION['autoris'] === 'ok'){
+        ?>
+        <nav>
+            <ul>
+                <li><a href="./../src/Controller/ControllerDeconnect.php">deconnetion</a></li>
+            </ul>
+        </nav>
+    </header>
      <section class="section">
 
                 <aside class="left-aside">
@@ -27,7 +37,7 @@ session_start();
                         </div>
                       
                         <div class="arrea">
-                                <input type="text"  id="newList" placeholder="new List" class="list-box"></input>
+                                <input type="text"  id="newList" placeholder="new Task ..." class="list-box"></input>
                                 <button id="addList" class="adding">Add</button>
                         </div>
                        
@@ -41,22 +51,68 @@ session_start();
                              <div class="list-container">
                                <ul>
                                     <li>
-                                            <h2 id="root">Title of List</h2>
-                                            <p id="date">date of the list creation</p>
-                                            <div id="task">task</div>
-                                            <input type="text" name="task" placeholder="new task">
-                                            <button id="addtask" class="btn">add task</button>
+                                            <h2 id="root">Tasks :</h2>
                                     </li>
                                    
                                </ul>
                                
                             </div>
                         </aside>
-                        
-                                                    
-     </section>
+    </section>
+    <?php } else{ ;?>
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="./connection.php">connection</a></li>
+                            <li><a href="./register.php">register</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div id="div_H_connect">
+                    <h1>Super Reminder</h1>
+                    <p>Please <a href="./connection.php">log in</a> ...</p>
+                </div>
+            <?php }?>
+
+<?php require_once('./include/footer.php'); ?>
+
+
 </body>
 </html>
+
+<!-- <header>
+        <?php
+            //if(isset($_SESSION['autoris']) && $_SESSION['autoris'] === 'ok'){
+        ?>
+        <nav>
+            <ul>
+                <li><a href="./../src/Controller/ControllerDeconnect.php">deconnetion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Super Reminder</h1>
+
+    <input type="text" id="newList" placeholder="New Task ...">
+    <button id="addList">Add</button>
+
+
+    <div id="root"></div>
+
+            <?php //} else{ ;?>
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="./connection.php">connection</a></li>
+                            <li><a href="./register.html">register</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <h1>Super Reminder</h1>
+                <p>Please <a href="./connection.php">log in</a> ...</p>
+            <?php //}?>
+
+<?php //require_once('./include/footer.php'); ?> -->
 
 
 

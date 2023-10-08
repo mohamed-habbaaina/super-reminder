@@ -16,6 +16,7 @@
      
 </head>
 <body>
+<?php require_once('./include/header.php'); ?>
 
 <section class="section">
                 <aside class="left-aside">
@@ -64,6 +65,7 @@
                             </div>
                 </aside>
      </section>
+     <?php require_once('./include/footer.php'); ?>
 
 </body>
 </html>

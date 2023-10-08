@@ -14,6 +14,7 @@ session_start();
     <title>Login</title>
 </head>
 <body>
+<?php require_once('./include/header.php'); ?>
 
 <section class="section">
                 <aside class="left-aside">
@@ -25,7 +26,7 @@ session_start();
                         <div class="paraf-5">
                                 <div>sign in</div>
                         </div>
-                        <form action="" method="post" id="formlConnect" class="form">
+                        <form action="" method="post" id="formConnect" class="form">
                             
                             <div class="form-container-login">
                                     <input type="email" name="email"  class="form-box-login"
@@ -44,6 +45,8 @@ session_start();
                             </div>
                         </form>
 
+                        <div class="alert"></div>
+
 
                 </aside>
                 <aside class="right-aside-login">
@@ -61,6 +64,8 @@ session_start();
                                 </div>
                 </aside>
      </section>
+
+     <?php require_once('./include/footer.php'); ?>
 
 </body>
 </html>

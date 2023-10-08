@@ -16,7 +16,7 @@
                    <ul>
                        <li><a href="./todoList.php">Remider</a></li>
                        <li><a href="./connection.php">Connection</a></li>
-                       <li><a href="./register.html">Register</a></li>
+                       <li><a href="./register.php">Register</a></li>
                    </ul>
                </nav>
            </header>

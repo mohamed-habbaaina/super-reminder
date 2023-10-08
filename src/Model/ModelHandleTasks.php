@@ -1,9 +1,11 @@
 <?php
 namespace Model\ModelHandleTasks;
 use Model\DbConnection\DbConnection;
+use Model\ModelUser\ModelUser;
 require_once ('DbConnection.php');
+require_once('ModelUser.php');
 
-class ModelHandleTasks{
+class ModelHandleTasks extends ModelUser {
     public function __construct()
     {
 
