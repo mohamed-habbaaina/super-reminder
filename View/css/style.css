@@ -1,16 +1,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
-body {
-    font-family: 'Koulen', cursive;
-   
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+html,
+body {
+	width: 100%;
+	height: 100vh;
+    font-family: 'Koulen', cursive;
+	text-decoration: none;
+	list-style: none;
+    overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+li {
+	list-style: none;
+
+}
+header{
+    width: 100%;
+    height: 80px;
+    margin: auto;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 100%;
+}
+header li{
+    margin-inline: 5%;
+}
+footer{
+    width: 100%;
+    height: 80px;
+    margin-left: 100px;
+}
 .section{
     margin: auto;
     background-color: #725c5c81;
     width: 90%;
-    height: 630px;
+    /* height: 600px; */
     border-radius: 10px;
     display: flex;
 }
@@ -282,7 +322,85 @@ body {
     font-size: 24px;
 }
 
+/* style todoList */
+#root{
+    max-height: 430px;
+}
+#root div{
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(45deg, black, transparent);
+    color: white;
+    border-radius: 8px;
+    margin: 6px 0;
+    padding: 3px 6px;
+    overflow-x: hidden;
 
+}
+#root div input {
+    order: -1;
+}
+#root div button{
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+}
+#root div:hover button{
+    transform: translateX(0%)
+
+}
+
+.done{
+    color: red;
+    margin-left: 10%;
+    text-decoration: line-through;
+}
+#addList {
+    height: 60px;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#addList:hover,
+#addList:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#addList:active {
+  background: var(--color);
+  color: #fff;
+}
+/* DIV reminder page if hors connection */
+#div_H_connect{
+    margin: 80px 30px 0 80px;
+    min-height: 700px;
+
+}
 
 /* .check-box[data-done="true"] > *:nth-child(1){
     display: none;
@@ -302,6 +420,10 @@ body {
 @media (max-width: 1344px) {
     .section {
       background-color: yellow;
+      /* veux mieux rajouter flex direction pour mettre les deux section en verticale mais il y'a un display none pour la section right-aside*/
+    }
+    .right-aside{
+        display: block;
     }
     .sum-task p{
         font-family: 'Times New Roman', Times, serif;
@@ -309,6 +431,7 @@ body {
         width: 100%;
     }
     .roller{
+        
         display: none;
     }
     .paraf-5 div{
