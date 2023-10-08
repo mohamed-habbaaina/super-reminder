@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         
         if(listText.length > 1){
 
-            let insertList = await fetch('./../src/Controller/ControllerHandleTasks.php?listText=' + listText)
+            let insertList = await fetch('./src/Controller/ControllerHandleTasks.php?listText=' + listText)
             newListInput.value = '';
             window.location.reload();
         }
@@ -22,11 +22,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
     
     // creating the elements HTML
-    const response = await fetch('../src/Controller/ControllerHandleTasks.php');
+    const response = await fetch('./src/Controller/ControllerHandleTasks.php');
     if(response.ok){
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         
         data.forEach(item => {
             
@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
                 e.preventDefault();
                 
-                let updatStatus = await fetch('./../src/Controller/ControllerHandleTasks.php?status=' + item.id_list)
+                let updatStatus = await fetch('./src/Controller/ControllerHandleTasks.php?status=' + item.id_list)
                 window.location.reload();
         
                 e.stopPropagation();
@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             button.addEventListener('click', deletList)
             
             async function deletList(e){
-                let deleteList = await fetch('./../src/Controller/ControllerHandleTasks.php?delete=' + item.id_list)
+                let deleteList = await fetch('./src/Controller/ControllerHandleTasks.php?delete=' + item.id_list)
                 window.location.reload();
                 e.stopPropagation();
 
