@@ -26,7 +26,7 @@ session_start();
                         <div class="paraf-5">
                                 <div>sign in</div>
                         </div>
-                        <form action="" method="post" id="formlConnect" class="form">
+                        <form action="" method="post" id="formConnect" class="form">
                             
                             <div class="form-container-login">
                                     <input type="email" name="email"  class="form-box-login"
@@ -44,6 +44,8 @@ session_start();
                                     <button class="btn">Connection</button>
                             </div>
                         </form>
+
+                        <div class="alert"></div>
 
 
                 </aside>
