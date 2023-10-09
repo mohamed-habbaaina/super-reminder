@@ -1,0 +1,10 @@
+@media (max-width: 730px) {
+    .right-aside-login{
+        display: none;
+    }
+    .right-aside{
+        display: none;
+    }
+    .right-aside-register{
+        display: none;
+    }}

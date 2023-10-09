@@ -365,7 +365,7 @@ footer{
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
   --color: #373B44;
-  
+  margin: 10px auto;
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
@@ -492,11 +492,19 @@ footer{
         text-align: center;
         margin: 0;
     }
+    .arrea{
+        height: 8rem;
+    }
   }
   
   /* Media query pour les smartphones */
   @media (max-width: 730px) {
 
+    .section{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
     .paraf-5 div {
         font-size: 2.5rem;
         text-align: center;
@@ -587,13 +595,15 @@ footer{
 
     }
     .right-aside-login{
-        display: none;
+        display: block;
     }
     .right-aside{
-        display: none;
+        margin: auto;
+        padding-top: 20px;
+        display: block;
     }
     .right-aside-register{
-        display: none;
+        display: block;
     }
   }
     
